@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POpup</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        button{
+            padding: 10px;
+            margin: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        #popup{
+            display: none;
+            background-color: rgb(150, 133, 133);
+            margin-left: 500px;
+            height: 300px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <button class="modalpopup" onclick="popupOpen()">click me</button>
+    <div id="popup">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum perferendis dolor, eaque quisquam repellendus adipisci accusamus quos asperiores nemo rerum</p>
+    <button class="close" id="close" onclick="popupClose()">close</button>
+    </div>
+    <script src="up.js"></script>
+</body>
+</html>
