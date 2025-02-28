@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            display: inline-block;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+        }
+        #display {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="display">00:00:00</div>
+        <button onclick="startStopwatch()">Start</button>
+        <button onclick="stopStopwatch()">Stop</button>
+        <button onclick="resetStopwatch()">Reset</button>
+    </div>
+
+    <script>
+        let timer;
+        let seconds = 0, minutes = 0, hours = 0;
+        let isRunning = false;
+
+        function startStopwatch() {
+            if (!isRunning) {
+                isRunning = true;
+                timer = setInterval(updateTime, 1000);
+            }
+        }
+
+        function stopStopwatch() {
+            clearInterval(timer);
+            isRunning = false;
+        }
+
+        function resetStopwatch() {
+            clearInterval(timer);
+            isRunning = false;
+            seconds = 0;
+            minutes = 0;
+            hours = 0;
+            document.getElementById("display").innerText = "00:00:00";
+        }
+
+        function updateTime() {
+            seconds++;
+            if (seconds == 60) {
+                seconds = 0;
+                minutes++;
+            }
+            if (minutes == 60) {
+                minutes = 0;
+                hours++;
+            }
+            let formattedTime = 
+                (hours < 10 ? "0" : "") + hours + ":" + 
+                (minutes < 10 ? "0" : "") + minutes + ":" + 
+                (seconds < 10 ? "0" : "") + seconds;
+            document.getElementById("display").innerText = formattedTime;
+        }
+    </script>
+</body>
+</html>
