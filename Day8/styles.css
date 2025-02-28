@@ -1,0 +1,42 @@
+.Freshman
+{
+    height: 200px;
+    width: 250px;
+    background-color: rgb(162, 159, 159);
+    float: left;
+    margin-top: 10px;
+    margin-left: 100px;
+    border-radius: 20px;
+    padding: 20px;
+}
+.Freshman:hover{
+    background-color: green;
+}
+.Junior
+{
+    height: 200px;
+    width: 250px;
+    background-color: rgb(162, 159, 159);
+    float: left;
+    margin-top: 10px;
+    margin-left: 100px;
+    border-radius: 20px;
+    padding: 20px;
+}
+.Junior:hover{
+    background-color: rgb(203, 22, 22);
+}
+.Sophomore
+{
+    height: 200px;
+    width: 250px;
+    background-color: rgb(137, 137, 137);
+    float: left;
+    margin-top: 10px;
+    margin-left: 100px;
+    border-radius: 20px;
+    padding: 20px;
+}
+.Sophomore:hover{
+    background-color: rgb(210, 203, 71);
+}
